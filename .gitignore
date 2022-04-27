@@ -1,0 +1,10 @@
+# user
+.vscode
+.idea
+.vs
+.DS_Store
+*/.DS_Store
+.git
+*.o
+.tmp
+sgx_linux_x64_driver*
