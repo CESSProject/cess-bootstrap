@@ -12,5 +12,5 @@ function log_suc()
 
 function log_err()
 {
-    printf "\033[0;31m$2\033[0m\n" "[ERROR] $1"
+    printf "\033[0;31m$1\033[0m\n" "[ERROR] $1"
 }
