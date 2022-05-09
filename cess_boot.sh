@@ -9,19 +9,21 @@ if [ $(id -u) -ne 0 ]; then
     exit 1
 fi
 
-help()
+function cess_help()
 {
 cat << EOF
 Usage:
+    cess [Options]
+Options:
     help                            show help information
-	--update                        Update the system and install dependencies
-    --install                       install cess
-    --uninstall                     uninstall cess
+	  update                        Update the system and install dependencies
+    install                       install cess
+    uninstall                     uninstall cess
 EOF
 exit 0
 }
 
-get_sys_name()
+function get_sys_name()
 {
     if grep -Eqii "CentOS" /etc/issue || grep -Eq "CentOS" /etc/*-release; then
         DISTRO='CentOS'
@@ -51,7 +53,7 @@ get_sys_name()
 }
 
 
-install_depenencies()
+function install_depenencies()
 {
     if [ x"$update" == x"true" ]; then
 		log_info "------------Apt update--------------"
@@ -78,7 +80,7 @@ install_depenencies()
 	sysctl -w net.ipv4.ip_local_port_range = 1024 65530
 }
 
-start_node()
+function start_node()
 {
     # Determine whether cess-node exists
     if [ ! -f "./node/cess-node" ]; then
@@ -88,23 +90,24 @@ start_node()
     
 }
 
-while true ; do
-    case "$1" in
-        --install)
-            # TODO
-            break;
-            ;;
-		--uninstall)
-            # TODO
-            break;
-            ;;
-		--update)
-            # TODO
-            break;
-            ;;
-        *)
-            help
-            break;
-            ;;
+
+case "$1" in
+    install)
+        # TODO
+        ;;
+    start)
+        start_node
+    	  ;;
+		uninstall)
+        # TODO
+        ;;
+		update)
+        # TODO
+        ;;
+    stop)
+    		# TODO
+    		;;
+    *)
+      cess_help
+      ;;
     esac
-done
