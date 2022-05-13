@@ -1,7 +1,7 @@
 #!/bin/bash
 
 basedir=$(cd `dirname $0`;pwd)
-scriptsdir=$basedir/scriptss
+scriptsdir=$basedir/scripts
 installdir=/opt/cess
 
 help()
