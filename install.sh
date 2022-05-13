@@ -1,7 +1,6 @@
 #!/bin/bash
 
 basedir=$(cd `dirname $0`;pwd)
-scriptsdir=$basedir/scripts
 installdir=/opt/cess
 
 help()
@@ -35,7 +34,6 @@ install_node()
   	echo "install Cess scriptss"
   	if [ ! -f $installdir ]; then mkdir -p $installdir; fi
 
-  	cp -r $basedir/logger/ $installdir/
   	cp -r $basedir/scripts/ $installdir/
   	cp -r $basedir/node/ $installdir/
   	cp -r $basedir/scheduler/ $installdir/

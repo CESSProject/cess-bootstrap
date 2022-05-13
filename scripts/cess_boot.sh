@@ -1,16 +1,15 @@
 #!/bin/bash
+
 installdir=/opt/cess
 scriptdir=$installdir/scripts
-loggerdir=$installdir/logger
 nodedir=$installdir/node
-schedulerdir=$installdir/scheduler
 
-source $loggerdir/logger.sh
-source $scriptsdir/cess_install.sh
-source $scriptsdir/start.sh
-source $scriptsdir/stop.sh
-source $scriptsdir/uninstall.sh
-source $scriptsdir/update.sh
+source $scriptdir/logger.sh
+source $scriptdir/cess_install.sh
+source $scriptdir/start.sh
+source $scriptdir/stop.sh
+source $scriptdir/uninstall.sh
+source $scriptdir/update.sh
 
 DISTRO=""
 # sudo permissions
