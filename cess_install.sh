@@ -10,8 +10,8 @@ Usage:
 	./install.sh [Options]
 
 Options:
-  help		Display this help and exit
-  node    Install cess scheduler and consensus node
+  help		    Display this help and exit
+  install     Install the cess script to your operating system
 EOF
 exit 0
 }

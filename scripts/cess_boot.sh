@@ -61,16 +61,6 @@ function get_sys_name()
     echo $DISTRO;
 }
 
-function start_node()
-{
-    # Determine whether cess-node exists
-    if [ ! -f ""$nodedir"/cess-node" ]; then
-        log_err ""$nodedir"/cess-node does not exist"
-        exit 1
-    fi
-    
-}
-
 get_sys_name
 case "$1" in
     start)
