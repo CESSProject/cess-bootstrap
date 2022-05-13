@@ -5,7 +5,7 @@ scriptdir=$installdir/scripts
 nodedir=$installdir/node
 
 source $scriptdir/logger.sh
-source $scriptdir/cess_install.sh
+source $scriptdir/install.sh
 source $scriptdir/start.sh
 source $scriptdir/stop.sh
 source $scriptdir/uninstall.sh
@@ -64,7 +64,7 @@ function get_sys_name()
 function start_node()
 {
     # Determine whether cess-node exists
-    if [ ! -f "../node/cess-node" ]; then
+    if [ ! -f ""$nodedir"/cess-node" ]; then
         log_err ""$nodedir"/cess-node does not exist"
         exit 1
     fi

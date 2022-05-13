@@ -2,7 +2,7 @@
 
 function install_depenencies()
 {
-  case "$1" in
+  case $DISTRO in
   		CentOS)
           echo "Install Centos dependencies"
           yum install docker -y
