@@ -1,8 +1,9 @@
 #!/bin/bash
-scriptsdir=$(cd `dirname $0`;pwd)
-loggerdir=$scriptsdir/../logger
-nodedir=$scriptsdir/../node
-schedulerdir=$scriptsdir/../scheduler
+installdir=/opt/cess
+scriptdir=$installdir/scripts
+loggerdir=$installdir/logger
+nodedir=$installdir/node
+schedulerdir=$installdir/scheduler
 
 source $loggerdir/logger.sh
 source $scriptsdir/cess_install.sh
@@ -25,7 +26,7 @@ Usage:
     cess [Options]
 Options:
     help                          Show help information
-	  update                        Update the system and install dependencies
+    update                        Update the system and install dependencies
     install                       Install cess
     uninstall                     Uninstall cess
 EOF
@@ -78,7 +79,7 @@ case "$1" in
         start_node
     	  ;;
 		uninstall)
-        # TODO
+        uninstall
         ;;
 		update)
         # TODO

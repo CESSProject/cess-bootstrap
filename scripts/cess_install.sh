@@ -4,7 +4,7 @@ function install_depenencies()
 {
   case "$1" in
   		CentOS)
-          echo "CentOS Linux"
+          echo "Install Centos dependencies"
           yum install docker -y
           systemctl start docker
           systemctl enable docker
@@ -16,7 +16,7 @@ function install_depenencies()
           fi
           ;;
       Ubuntu)
-          echo "Ubuntu"
+          echo "Install Ubuntu dependencies"
           if [ x"$update" == x"true" ]; then
             log_info "------------Apt update--------------"
             sudo apt-get update
@@ -28,8 +28,7 @@ function install_depenencies()
           sudo apt-get update
           sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release -y
           curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-          echo \
-          "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
           $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/nul
           sudo apt-get update
           sudo apt-get install docker-ce docker-ce-cli containerd.io -y

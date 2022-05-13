@@ -41,8 +41,8 @@ install_node()
   	cp -r $basedir/scheduler/ $installdir/
 
   	echo "Cess command line tools Install"
-  	chmod +x $installdir/scriptss/cess_boot.sh
-  	ln -s $installdir/scriptss/cess_boot.sh /usr/bin/cess
+  	chmod +x $installdir/scripts/cess_boot.sh
+  	ln -s $installdir/scripts/cess_boot.sh /usr/bin/cess
 
   	echo "install command line tools successfully!"
 }
