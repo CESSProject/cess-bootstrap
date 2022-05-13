@@ -1,8 +1,17 @@
 #!/bin/bash
-rootdir=$(cd `dirname $0`;pwd)
-loggerdir=$rootdir/logger
-source $loggerdir/logger.sh
+scriptsdir=$(cd `dirname $0`;pwd)
+loggerdir=$scriptsdir/../logger
+nodedir=$scriptsdir/../node
+schedulerdir=$scriptsdir/../scheduler
 
+source $loggerdir/logger.sh
+source $scriptsdir/cess_install.sh
+source $scriptsdir/start.sh
+source $scriptsdir/stop.sh
+source $scriptsdir/uninstall.sh
+source $scriptsdir/update.sh
+
+DISTRO=""
 # sudo permissions
 if [ $(id -u) -ne 0 ]; then
     echo "Please run with sudo!"
@@ -15,10 +24,10 @@ cat << EOF
 Usage:
     cess [Options]
 Options:
-    help                            show help information
+    help                          Show help information
 	  update                        Update the system and install dependencies
-    install                       install cess
-    uninstall                     uninstall cess
+    install                       Install cess
+    uninstall                     Uninstall cess
 EOF
 exit 0
 }
@@ -52,50 +61,20 @@ function get_sys_name()
     echo $DISTRO;
 }
 
-
-function install_depenencies()
-{
-    if [ x"$update" == x"true" ]; then
-		log_info "------------Apt update--------------"
-		apt-get update
-		if [ $? -ne 0 ]; then
-			log_err "Apt update failed"
-			exit 1
-		fi
-    fi
-
-    log_info "------------Install depenencies--------------"
-    apt install -y ocl-icd-* gcc git curl wget libhwloc* wget util-linux
-
-    if [ $? -ne 0 ]; then
-        log_err "Install libs failed"
-        exit 1
-    fi
-    sysctl -w net.ipv4.tcp_syncookies = 1
-    sysctl -w net.ipv4.tcp_tw_reuse = 1
-    sysctl -w net.ipv4.tcp_tw_recycle = 1
-    sysctl -w net.ipv4.tcp_fin_timeout = 30
-    sysctl -w net.ipv4.tcp_keepalive_time = 120
-    sysctl -w net.core.rmem_max=2500000
-	sysctl -w net.ipv4.ip_local_port_range = 1024 65530
-}
-
 function start_node()
 {
     # Determine whether cess-node exists
-    if [ ! -f "./node/cess-node" ]; then
-        log_err $rootdir"/node/cess-node does not exist"
+    if [ ! -f "../node/cess-node" ]; then
+        log_err ""$nodedir"/cess-node does not exist"
         exit 1
     fi
     
 }
 
-
+get_sys_name
 case "$1" in
-    install)
-        # TODO
-        ;;
     start)
+        install_depenencies DISTRO
         start_node
     	  ;;
 		uninstall)
