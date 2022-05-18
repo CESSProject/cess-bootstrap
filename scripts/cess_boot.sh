@@ -3,6 +3,7 @@
 installdir=/opt/cess
 scriptdir=$installdir/scripts
 nodedir=$installdir/node
+schedulerdir=$installdir/scheduler
 
 source $scriptdir/logger.sh
 source $scriptdir/install.sh
@@ -65,7 +66,7 @@ get_sys_name
 case "$1" in
     start)
         install_depenencies DISTRO
-        start_node
+        start_all
     	  ;;
 		uninstall)
         uninstall
@@ -74,7 +75,7 @@ case "$1" in
         # TODO
         ;;
     stop)
-    		# TODO
+    		stop_node_scheduler
     		;;
     *)
       cess_help
