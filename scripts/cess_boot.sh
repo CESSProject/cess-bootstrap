@@ -26,8 +26,8 @@ Usage:
     cess [Options]
 Options:
     help                          Show help information
-    update                        Update the system and install dependencies
-    install                       Install cess
+    start                         Start cess-bootstrap
+    stop                          Stop cess-bootstrap
     uninstall                     Uninstall cess
 EOF
 exit 0

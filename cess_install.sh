@@ -7,17 +7,17 @@ help()
 {
 cat << EOF
 Usage:
-	./install.sh [Options]
+	sh cess_install.sh [Options]
 
 Options:
   help		    Display this help and exit
-  install     Install the cess script to your operating system
+  install     Install the Cess-Boot on your system
 EOF
 exit 0
 }
 
 
-install_node()
+install()
 {
   echo "################################################################################################################################################"
   echo "################################################################################################################################################"
@@ -37,6 +37,7 @@ install_node()
   	cp -r $basedir/scripts/ $installdir/
   	cp -r $basedir/node/ $installdir/
   	cp -r $basedir/scheduler/ $installdir/
+  	cp -r $basedir/log/ $installdir/
 
   	echo "Cess command line tools Install"
   	chmod +x $installdir/scripts/cess_boot.sh
@@ -47,7 +48,7 @@ install_node()
 
 case "$1" in
 	"install")
-		install_node
+		install
 		;;
 	*)
 		help

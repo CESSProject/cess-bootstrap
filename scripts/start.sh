@@ -12,13 +12,14 @@ function start_all()
             log_err ""$schedulerdir"/scheduler incomplete"
             exit 1
     fi
-    docker pull cesslab/cess-boot:0.1.0
+    docker pull cesslab/cess-boot:0.1.1
     docker run -itd --name cess-boot \
-    -v /root/ChiangTest/docker/node/node/:/root/node \
-    -v /root/ChiangTest/docker/node/sche/:/root/scheduler \
+    -v $nodedir/:/root/node \
+    -v $schedulerdir/:/root/scheduler \
+    -v $installdir/log/:/root/log \
     -p 6060:6060 \
     -p 30330:30330 \
     -p 9933:9933 \
     -p 9944:9944 \
-    cess-boot:0.1.0
+    cess-boot:0.1.1
 }
