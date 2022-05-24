@@ -2,9 +2,10 @@
 
 basedir=$(cd `dirname $0`;pwd)
 installdir=/opt/cess
+
 source $basedir/config.sh
 
-help()
+function help()
 {
 cat << EOF
 Usage:
@@ -16,7 +17,6 @@ Options:
 EOF
 exit 0
 }
-
 
 function install()
 {
