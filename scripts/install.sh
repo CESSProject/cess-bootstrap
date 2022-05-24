@@ -5,9 +5,15 @@ function install_depenencies()
   case $DISTRO in
   		CentOS)
           echo "Install Centos dependencies"
-          yum install docker -y
-          systemctl start docker
-          systemctl enable docker
+          if [ $? -eq  0 ]; then
+            echo "Docker is installed!"
+          else
+            echo "Install the docker..."
+            yum install docker -y
+            systemctl start docker
+            systemctl enable docker
+            echo "Install the docker...installation complete!"
+          fi
           log_info "------------Install depenencies--------------"
           yum install -y ocl-icd-* gcc git curl wget libhwloc* wget util-linux
           if [ $? -ne 0 ]; then
@@ -25,15 +31,22 @@ function install_depenencies()
                exit 1
             fi
             fi
-          sudo apt-get update
-          sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release -y
-          curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-          $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/nul
-          sudo apt-get update
-          sudo apt-get install docker-ce docker-ce-cli containerd.io -y
-          systemctl start docker
-          systemctl enable docker
+          docker -v
+          if [ $? -eq  0 ]; then
+            echo "Docker is installed!"
+          else
+            echo "Install the docker..."
+            sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release -y
+            curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+            echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+            $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/nul
+            sudo apt-get update
+            sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+            systemctl start docker
+            systemctl enable docker
+            echo "Install the docker...installation complete!"
+          fi
+
           log_info "------------Install depenencies--------------"
           apt install -y ocl-icd-* gcc git curl wget libhwloc* wget util-linux
           if [ $? -ne 0 ]; then

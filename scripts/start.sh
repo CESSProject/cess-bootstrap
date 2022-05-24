@@ -21,5 +21,5 @@ function start_all()
     -p 30330:30330 \
     -p 9933:9933 \
     -p 9944:9944 \
-    cess-boot:0.1.1
+    cesslab/cess-boot:0.1.1
 }
