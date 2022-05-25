@@ -11,11 +11,12 @@ source $scriptdir/start.sh
 source $scriptdir/stop.sh
 source $scriptdir/uninstall.sh
 source $scriptdir/update.sh
+source $scriptdir/config.sh
 
 DISTRO=""
 # sudo permissions
 if [ $(id -u) -ne 0 ]; then
-    echo "Please run with sudo!"
+    echo "Please run with root user!"
     exit 1
 fi
 
@@ -66,6 +67,7 @@ get_sys_name
 case "$1" in
     start)
         install_depenencies DISTRO
+        configure
         start_all
     	  ;;
 		uninstall)

@@ -17,7 +17,7 @@ function start_all()
     -v $nodedir/:/root/node \
     -v $schedulerdir/:/root/scheduler \
     -v $installdir/log/:/root/log \
-    -p 6060:6060 \
+    -p $ServicePort:6060 \
     -p 30330:30330 \
     -p 9933:9933 \
     -p 9944:9944 \

@@ -3,9 +3,8 @@
 basedir=$(cd `dirname $0`;pwd)
 installdir=/opt/cess
 
-source $basedir/config.sh
 
-function help()
+help()
 {
 cat << EOF
 Usage:
@@ -18,7 +17,7 @@ EOF
 exit 0
 }
 
-function install()
+install()
 {
   echo "################################################################################################################################################"
   echo "################################################################################################################################################"
@@ -44,8 +43,6 @@ function install()
   	chmod +x $installdir/scripts/cess_boot.sh
   	ln -s $installdir/scripts/cess_boot.sh /usr/bin/cess
 
-  	echo "fill in the configuration file"
-  	configure
   	echo "install command line tools successfully!"
 }
 
