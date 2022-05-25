@@ -1,0 +1,12 @@
+# The rpc address of the chain node
+RpcAddr     = ""
+# The IP address of the machine's public network used by the scheduler program
+ServiceAddr = ""
+# Port number monitored by the scheduler program
+ServicePort = ""
+# Data storage directory
+DataDir     = ""
+# Phrase or seed of the controller account
+CtrlPrk     = ""
+# The address of stash account
+StashAcc    = ""
