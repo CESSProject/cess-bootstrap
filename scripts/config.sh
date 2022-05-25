@@ -2,27 +2,28 @@
 #------------------------------------------------#
 # Please modify the scheduler configuration file #
 #↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓#
-# RPC address of CESS test chain
+# RPC address of CESS chain
 RpcAddr=""
 
-# The IP address of the machine's public network used by the scheduler
+# The ip address of this machine
 ServiceAddr=""
 
-# Port number monitored by the scheduler
+# The port of the scheduler service
 ServicePort=""
 
-# Phrase words or seeds for identity account
+# Scheduler data storage path
 DataDir=""
 
-# Name of node
+# Controller account mnemonic is used to pay transaction gas fee
 CtrlPrk=""
 
-# Role of node
+# Stash account address need to have one million TCESS
 StashAcc=""
 
 #---------------------------------------------------#
 # Please modify the configuration file of cess-node #
 #↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓#
+#This account is used to generate and confirm blocks
 NodeSecretKey=""
 
 function configure() {
