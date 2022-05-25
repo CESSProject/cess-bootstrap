@@ -66,9 +66,9 @@ function get_sys_name()
 get_sys_name
 case "$1" in
     start)
-        #install_depenencies DISTRO
+        install_depenencies DISTRO
         configure
-        #start_all
+        start_all
     	  ;;
 		uninstall)
         uninstall
