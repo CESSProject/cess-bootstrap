@@ -26,7 +26,7 @@ StashAcc=
 NodeSecretKey=
 
 function configure() {
-    sed -i "s|RpcAddr     = \"\"|rpcAddr: ${RpcAddr}|g" ${installdir}/scheduler/conf.toml
+    sed -i "s|RpcAddr     = \"\"|RpcAddr     = \"${RpcAddr}\"|g" ${installdir}/scheduler/conf.toml
     sed -i "s|ServiceAddr = \"\"|ServiceAddr = \"${ServiceAddr}\"|g" ${installdir}/scheduler/conf.toml
     sed -i "s|ServicePort = \"\"|ServicePort = \"${ServicePort}\"|g" ${installdir}/scheduler/conf.toml
     sed -i "s|DataDir     = \"\"|DataDir     = \"${DataDir}\"|g" ${installdir}/scheduler/conf.toml
