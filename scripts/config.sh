@@ -3,27 +3,27 @@
 # Please modify the scheduler configuration file #
 #↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓#
 # RPC address of CESS test chain
-RpcAddr=
+RpcAddr=""
 
 # The IP address of the machine's public network used by the scheduler
-ServiceAddr=
+ServiceAddr=""
 
 # Port number monitored by the scheduler
-ServicePort=
+ServicePort=""
 
 # Phrase words or seeds for identity account
-DataDir=
+DataDir=""
 
 # Name of node
-CtrlPrk=
+CtrlPrk=""
 
 # Role of node
-StashAcc=
+StashAcc=""
 
 #---------------------------------------------------#
 # Please modify the configuration file of cess-node #
 #↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓#
-NodeSecretKey=
+NodeSecretKey=""
 
 function configure() {
     sed -i "s|RpcAddr     = \"\"|RpcAddr     = \"${RpcAddr}\"|g" ${installdir}/scheduler/conf.toml
