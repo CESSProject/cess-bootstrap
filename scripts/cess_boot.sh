@@ -12,6 +12,7 @@ source $scriptdir/stop.sh
 source $scriptdir/uninstall.sh
 source $scriptdir/update.sh
 source $scriptdir/config.sh
+source $scriptdir/restart.sh
 
 DISTRO=""
 # sudo permissions
@@ -28,6 +29,7 @@ Usage:
 Options:
     help                          Show help information
     start                         Start cess-bootstrap
+    restart                       Restart cess-bootstrap
     stop                          Stop cess-bootstrap
     uninstall                     Uninstall cess
 EOF
@@ -72,6 +74,9 @@ case "$1" in
     	  ;;
 		uninstall)
         uninstall
+        ;;
+    restart)
+        restart
         ;;
 		update)
         # TODO
