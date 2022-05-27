@@ -2,5 +2,6 @@
 
 function restart()
 {
-  docker restart cess-boot
+  stop_node_scheduler
+  start_all
 }
