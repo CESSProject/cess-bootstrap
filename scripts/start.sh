@@ -12,8 +12,14 @@ function start_all()
             log_err ""$schedulerdir"/scheduler incomplete"
             exit 1
     fi
+    if [ ${DataDir: -1} = / ]; then
+            echo
+    else
+            DataDir="$DataDir/"
+    fi
     docker pull cesslab/cess-boot:0.1.1
     docker run -itd --name cess-boot --network host \
+    -v $DataDir:/root/scheduler \
     -v $nodedir/:/root/node \
     -v $schedulerdir/:/root/scheduler \
     -v $installdir/log/:/root/log \
