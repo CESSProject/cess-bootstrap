@@ -30,7 +30,7 @@ function configure() {
     sed -i "s|RpcAddr     = \"\"|RpcAddr     = \"${RpcAddr}\"|g" ${installdir}/scheduler/conf.toml
     sed -i "s|ServiceAddr = \"\"|ServiceAddr = \"${ServiceAddr}\"|g" ${installdir}/scheduler/conf.toml
     sed -i "s|ServicePort = \"\"|ServicePort = \"${ServicePort}\"|g" ${installdir}/scheduler/conf.toml
-    sed -i "s|DataDir     = \"\"|DataDir     = \"/root/scheduler\"|g" ${installdir}/scheduler/conf.toml
+    sed -i "s|DataDir     = \"\"|DataDir     = \"/root/scheduler_data\"|g" ${installdir}/scheduler/conf.toml
     sed -i "s|CtrlPrk     = \"\"|CtrlPrk     = \"${CtrlPrk}\"|g" ${installdir}/scheduler/conf.toml
     sed -i "s|StashAcc    = \"\"|StashAcc    = \"${StashAcc}\"|g" ${installdir}/scheduler/conf.toml
     echo $NodeSecretKey > $installdir/node/secretKey1.txt
