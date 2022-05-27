@@ -5,6 +5,7 @@ RUN mkdir -p /root/scheduler
 RUN mkdir -p /root/install_pbc
 RUN mkdir -p /root/install_dependence
 RUN mkdir -p /root/log
+RUN mkdir -p /root/scheduler_data
 COPY startup.sh /root/
 COPY cron.sh /root/
 COPY install_pbc /root/install_pbc/
