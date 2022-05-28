@@ -152,9 +152,9 @@ If you want to completely uninstall cess-bootstrap from your system, you can:
 cess uninstall
 ```
 
-After performing the above steps means that you have registered and running a consensus server, of course you want to become a consensus node, please refer to this link:https://github.com/CESSProject/cess-bootstrap/blob/main/docs/Become%20Consensus.md
+After performing the above steps means that you have registered and running a consensus server, of course you want to become a consensus node, please refer to [this link](https://github.com/CESSProject/cess-bootstrap/blob/main/docs/Become%20Consensus.md).
 
-When you want to stop the consensus node, please refer to this link:https://github.com/CESSProject/cess-bootstrap/blob/main/docs/Stop%20Consensus.md
+When you want to stop the consensus node, please refer to [this link](https://github.com/CESSProject/cess-bootstrap/blob/main/docs/Stop%20Consensus.md).
 
 
 
