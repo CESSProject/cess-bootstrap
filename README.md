@@ -13,7 +13,7 @@ This project is the startup script project of the consensus node. When running t
 
 ### Steps for usage
 
-#### clone code
+#### Clone code
 
 First, the operating system needs to be switched to the root role, and then the code needs to be cloned locally. If there is no git tool on your system, please refer to the method for installing the git tool. The working path here is /root
 
@@ -166,7 +166,7 @@ The main related projects are: https://github.com/CESSProject/cess
 
 If you want to contribute your code, you can fork the code to your local repository, and make a pull request after modifying the corresponding area. We will review your code as soon as possible, thank you.
 
-## open source protocol
+## Open source protocol
 
 Apache License
 Version 2.0, January 2004

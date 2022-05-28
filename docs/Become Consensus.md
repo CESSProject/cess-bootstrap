@@ -22,7 +22,7 @@ Block Browser Network -> Staking -> Account Actions -> Session key
 
 - Fill in the session key generated earlier
 
-## become a validator
+## Become a validator
 
 Block Browser Network -> Staking -> Account Actions -> Validate
 
