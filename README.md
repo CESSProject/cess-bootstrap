@@ -58,9 +58,9 @@ vim /root/cess-bootstrap/scripts/config.sh
 
 Block Browser Network -> Staking -> Account Actions -> Add Stash
 
-https://github.com/CESSProject/W3F-illustration/blob/b08c27a406f3c293877c8be8956d2768723e370d/cess-boostrap/1.jpg
+![Image text](https://github.com/CESSProject/W3F-illustration/blob/b08c27a406f3c293877c8be8956d2768723e370d/cess-boostrap/1.jpg)
 
-https://github.com/CESSProject/W3F-illustration/blob/b08c27a406f3c293877c8be8956d2768723e370d/cess-boostrap/2.jpg
+![Image text](https://github.com/CESSProject/W3F-illustration/blob/b08c27a406f3c293877c8be8956d2768723e370d/cess-boostrap/2.jpg)
 
 - Select stash account and controller account
 - Mortgage Amount 1,000,000 TCESS
