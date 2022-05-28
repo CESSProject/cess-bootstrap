@@ -29,7 +29,7 @@ After the installation is successful, enter the code folder
 cd /root/cess-bootstrap
 ```
 
-First, please obtain the latest version of the cess-node executable file and its configuration file customSpecRaw.json and place it in the node directory. For the method of obtaining cess-node, please refer to the readme of the CESSProject/cess project: https://github.com/CESSProject /cess/blob/576434eef7fbd7721f5b4ed48114b3b1ad0e791f/README.md, I will place the obtained files in the node directory below.
+First, please obtain the latest version of the cess-node executable file and its configuration file customSpecRaw.json and place it in the node directory. For the method of obtaining cess-node, please refer to the readme of the CESSProject/cess project: https://github.com/CESSProject/cess/blob/main/README.md, I will place the obtained files in the node directory below.
 
 ```shell
 mv /root/cess-node /root/cess-bootstrap/node/
@@ -152,7 +152,11 @@ If you want to completely uninstall cess-bootstrap from your system, you can:
 cess uninstall
 ```
 
-After you start a consensus node with cess start, you can become a consensus node.
+After performing the above steps means that you have registered and running a consensus server, of course you want to become a consensus node, please refer to this link:https://github.com/CESSProject/cess-bootstrap/blob/main/docs/Become%20Consensus.md
+
+When you want to stop the consensus node, please refer to this link:https://github.com/CESSProject/cess-bootstrap/blob/main/docs/Stop%20Consensus.md
+
+
 
 ## Related items
 
