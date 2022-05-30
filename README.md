@@ -6,7 +6,7 @@ This project is the startup script project of the consensus node. When running t
 
 ## Install
 
-### Environment required:
+### Prerequisites:
 
 * Centos7 and above or Ubuntu18.04 and above
 * Internet connection required
