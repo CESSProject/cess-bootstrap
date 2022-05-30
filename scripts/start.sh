@@ -3,7 +3,7 @@
 function start_all()
 {
     # Determine whether cess-node exists
-    if [ ! -f ""$nodedir"/cess-node" ] && [ ! -f ""$nodedir"/customSpecRaw.json" ] && [ ! -f ""$nodedir"/secretKey1.txt" ]; then
+    if [ ! -f ""$nodedir"/cess-node" ] && [ ! -f ""$nodedir"/secretKey1.txt" ]; then
         log_err ""$nodedir"/cess-node incomplete"
         exit 1
     fi

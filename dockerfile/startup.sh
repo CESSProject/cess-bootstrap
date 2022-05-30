@@ -12,7 +12,7 @@ processScheNum=`ps -fe | grep scheduler | grep -v grep | wc -l`
         fi
 chmod 777 /root/node/cess-node
 echo start run cess-node >> /root/log/start.log
-nohup /root/node/cess-node --base-path /node/t026 --chain /root/node/customSpecRaw.json --validator >/dev/null 2>&1 &
+nohup /root/node/cess-node --base-path /node/t026 --chain cess-testnet --validator >/dev/null 2>&1 &
 sleep 5
 ps -ef | grep cess-node | grep -v grep | awk '{print $2}' | xargs kill -9
 echo stop run cess-node >> /root/log/start.log
@@ -23,6 +23,6 @@ touch /var/spool/cron/crontabs/root
 echo "* * * * * root sh /root/cron.sh" >> /etc/crontab
 service cron start >> /root/log/start.log
 
-/root/node/cess-node key insert --base-path /node/t026 --chain /root/node/customSpecRaw.json --scheme Sr25519  --key-type babe --suri /root/node/secretKey1.txt
-/root/node/cess-node key insert --base-path /node/t026 --chain /root/node/customSpecRaw.json --scheme Ed25519  --key-type gran --suri /root/node/secretKey1.txt
-/root/node/cess-node --base-path /node/t026 --chain /root/node/customSpecRaw.json --validator
+/root/node/cess-node key insert --base-path /node/t026 --chain cess-testnet --scheme Sr25519  --key-type babe --suri /root/node/secretKey1.txt
+/root/node/cess-node key insert --base-path /node/t026 --chain cess-testnet --scheme Ed25519  --key-type gran --suri /root/node/secretKey1.txt
+/root/node/cess-node --base-path /node/t026 --chain cess-testnet --validator
