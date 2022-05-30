@@ -29,7 +29,7 @@ After the installation is successful, enter the code folder
 cd /root/cess-bootstrap
 ```
 
-First, please obtain the latest version of the cess-node executable file and its configuration file customSpecRaw.json and place it in the node directory. For the method of obtaining cess-node, please refer to the readme of the CESSProject/cess project: https://github.com/CESSProject/cess/blob/main/README.md, I will place the obtained files in the node directory below.
+First, please obtain the latest version of the cess-node executable file and place it in the node directory. For the method of obtaining cess-node, please refer to the readme of the CESSProject/cess project: https://github.com/CESSProject/cess/blob/main/README.md, I will place the obtained files in the node directory below.
 
 ```shell
 mv /root/cess-node /root/cess-bootstrap/node/
