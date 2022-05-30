@@ -8,8 +8,9 @@ This project is the startup script project of the consensus node. When running t
 
 ### Environment required:
 
-* centos7 and above or Ubuntu18.04 and above
+* Centos7 and above or Ubuntu18.04 and above
 * Internet connection required
+* Public IP address
 
 ### Steps for usage
 
