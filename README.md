@@ -30,13 +30,13 @@ After the installation is successful, enter the code folder
 cd /root/cess-bootstrap
 ```
 
-First, please obtain the latest version of the cess-node executable file and place it in the node directory. For the method of obtaining cess-node, please refer to the readme of the CESSProject/cess project: https://github.com/CESSProject/cess/blob/main/README.md, I will place the obtained files in the node directory below.
+First, please obtain the latest version of the cess-node executable file and place it in the node directory. For the method of obtaining cess-node, please go to the following link to obtain the latest version of the cess-node executable file:https://github.com/CESSProject/cess/releases, I will place the obtained files in the node directory below.
 
 ```shell
 mv /root/cess-node /root/cess-bootstrap/node/
 ```
 
-Secondly, please get the latest version of the scheduler executable file and put it in the scheduler directory, please get the latest scheduler release version in the CESSProject/cess-bootstrap project (https://github.com/CESSProject/cess-bootstrap) , I will place the obtained files in the scheduler directory below.
+Secondly, please get the latest version of the scheduler executable file and put it in the scheduler directory,please go to the following link to obtain the latest version of the scheduler executable file:https://github.com/CESSProject/cess-bootstrap/releases , I will place the obtained files in the scheduler directory below.
 
 ```shell
 mv /root/scheduler /root/cess-bootstrap/scheduler/
