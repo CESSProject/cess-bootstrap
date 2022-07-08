@@ -18,14 +18,16 @@ function start_all()
             DataDir="$DataDir/"
     fi
     docker pull cesslab/cess-boot:0.1.3
+    mkdir /root/scheduler_data
     docker run -itd --name cess-boot --network host \
-    -v $DataDir:/root/scheduler_data \
+    -v /root/scheduler_data:$DataDir \
     -v $nodedir/:/root/node \
     -v $schedulerdir/:/root/scheduler \
     -v $installdir/log/:/root/log \
-    -p $ServicePort:6060 \
-    -p 30330:30330 \
-    -p 9933:9933 \
-    -p 9944:9944 \
     cesslab/cess-boot:0.1.3
+#    -p $ServicePort:6060 \
+#    -p 30330:30330 \
+#    -p 9933:9933 \
+#    -p 9944:9944 \
+#    cesslab/cess-boot:0.1.3
 }
