@@ -18,7 +18,6 @@ function start_all()
             DataDir="$DataDir/"
     fi
     docker pull cesslab/cess-boot:0.1.3
-    mkdir /root/scheduler_data
     docker run -itd --name cess-boot --network host \
     -v /root/scheduler_data:$DataDir \
     -v $nodedir/:/root/node \
