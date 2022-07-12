@@ -85,7 +85,7 @@ ServiceAddr="127.0.0.1"
 ServicePort="8080"
 
 # Scheduler data storage path
-DataDir="/root/log/"
+DataDir="/root/scheduler_data/"
 
 # Controller account mnemonic is used to pay transaction gas fee
 CtrlPrk="hello cess hello cess hello cess hello cess hello cess"

@@ -19,7 +19,7 @@ function start_all()
     fi
     docker pull cesslab/cess-boot:0.1.3
     docker run -itd --name cess-boot --network host \
-    -v /root/scheduler_data:$DataDir \
+    -v $DataDir:/root/scheduler_data \
     -v $nodedir/:/root/node \
     -v $schedulerdir/:/root/scheduler \
     -v $installdir/log/:/root/log \
