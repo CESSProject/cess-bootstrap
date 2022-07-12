@@ -29,11 +29,11 @@ nohup /root/node/cess-node --base-path /node/t026 --chain cess-testnet --validat
 sleep 30s
 chmod 777 /root/scheduler/scheduler
 cd /root/scheduler/
-nohup ./scheduler run >/root/scheduler/scheduler.log 2>&1 &
-processScheNum=`ps -fe | grep scheduler | grep -v grep | wc -l`
-        if [ $processScheNum -eq 0 ];then
-                echo scheduler not start >> /root/log/start.log
-		exit
-        else
-                echo scheduler running >> /root/log/start.log
-        fi
+./scheduler run
+#processScheNum=`ps -fe | grep scheduler | grep -v grep | wc -l`
+#        if [ $processScheNum -eq 0 ];then
+#                echo scheduler not start >> /root/log/start.log
+#		exit
+#        else
+#                echo scheduler running >> /root/log/start.log
+#        fi
