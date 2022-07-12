@@ -12,10 +12,10 @@
 #        fi
 chmod 777 /root/node/cess-node
 echo start run cess-node >> /root/log/start.log
-nohup /root/node/cess-node --base-path /node/t026 --chain cess-testnet --validator >/dev/null 2>&1 &
-sleep 5
-ps -ef | grep cess-node | grep -v grep | awk '{print $2}' | xargs kill -9
-echo stop run cess-node >> /root/log/start.log
+#nohup /root/node/cess-node --base-path /node/t026 --chain cess-testnet --validator >/dev/null 2>&1 &
+#sleep 5
+#ps -ef | grep cess-node | grep -v grep | awk '{print $2}' | xargs kill -9
+#echo stop run cess-node >> /root/log/start.log
 
 echo add crontab script >> /root/log/start.log
 chmod 777 /root/cron.sh
