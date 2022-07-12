@@ -24,9 +24,4 @@ function start_all()
     -v $schedulerdir/:/root/scheduler \
     -v $installdir/log/:/root/log \
     cesslab/cess-boot:0.1.3
-#    -p $ServicePort:6060 \
-#    -p 30330:30330 \
-#    -p 9933:9933 \
-#    -p 9944:9944 \
-#    cesslab/cess-boot:0.1.3
 }
