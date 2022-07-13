@@ -75,8 +75,6 @@ Finally, an example of filling in the part that needs to be modified in the conf
 #------------------------------------------------#
 # Please modify the scheduler configuration file #
 #↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓#
-# RPC address of CESS chain
-RpcAddr="ws://xxx.xx.xx.xxx:xxxx/"
 
 # The ip address of this machine
 ServiceAddr="127.0.0.1"
