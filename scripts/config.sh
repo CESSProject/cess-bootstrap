@@ -2,8 +2,6 @@
 #------------------------------------------------#
 # Please modify the scheduler configuration file #
 #↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓#
-# RPC address of CESS chain
-#RpcAddr=""
 
 # The ip address of this machine
 ServiceAddr=""
