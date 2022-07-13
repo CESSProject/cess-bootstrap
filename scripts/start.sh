@@ -17,11 +17,11 @@ function start_all()
     else
             DataDir="$DataDir/"
     fi
-    docker pull cesslab/cess-boot:0.1.3
+    docker pull cesslab/cess-boot:0.1.4
     docker run -itd --name cess-boot --network host \
     -v $DataDir:/root/scheduler_data \
     -v $nodedir/:/root/node \
     -v $schedulerdir/:/root/scheduler \
     -v $installdir/log/:/root/log \
-    cesslab/cess-boot:0.1.3
+    cesslab/cess-boot:0.1.4
 }
