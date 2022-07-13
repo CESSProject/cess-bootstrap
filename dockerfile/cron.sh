@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sleep 10s
+sleep 50s
 #processScheNum=`ps -fe | grep scheduler | grep -v grep | wc -l`
 #        if [ $processScheNum -eq 0 ];then
 #		echo processScheNum:$processScheNum >> /root/log/cron.log
