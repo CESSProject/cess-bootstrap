@@ -100,7 +100,6 @@ NodeSecretKey="hello cess hello cess hello cess hello cess hello cess"
 
 Configuration file explanation:
 
-* RpcAddr: the connection address of the cess chain
 * ServiceAddr: the public IP address of the machine
 * ServicePort: The startup port of the scheduler service, which can be customized
 * DataDir: The path where the generated files of the scheduler service are mounted, recommended /root/log/
