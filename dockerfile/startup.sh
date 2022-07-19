@@ -34,6 +34,7 @@ processScheNum=`ps -fe | grep scheduler | grep -v grep | wc -l`
         else
                 echo scheduler running >> /root/log/start.log
         fi
-while 1 ; do
+
+while [ true ]; do
     sleep 10s
 done
